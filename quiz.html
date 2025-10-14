@@ -110,14 +110,14 @@
             }
 
             resp = function(n) {
-                numPergunta += 1;
-                chamarPergunta()
                 if(n == correto){
                     respostasCorretas += 1;
                     alert("Correto! " + explicacao)
                 } else {
                     alert("Errado. " + explicacao)
                 }
+                numPergunta += 1;
+                chamarPergunta()
             }
         </script>
     </head>
