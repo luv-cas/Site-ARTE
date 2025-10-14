@@ -9,6 +9,12 @@ h1 {
     color: white;
 }
 
+button {
+    border: solid 10px aliceblue;
+    border-radius: 2px;
+    background-color: aliceblue;
+}
+
 .topbar {
     position: fixed;
     left: 0;
@@ -20,6 +26,8 @@ h1 {
 
 main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin: auto;
 }

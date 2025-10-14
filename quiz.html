@@ -17,13 +17,23 @@
             }
         </script>
     </head>
+
     <body onload="callStart()">
         <div class="topbar"></div>
-        <img src="imagens/pilar.png" style="left: 0; height: 100%; position: fixed;">
-        <img src="imagens/pilar.png" style="left: auto; right: 0; height: 100%; position: fixed;">
+        <img src="imagens/pilar.png" style="left: 0; top: 0; height: 100%; width: 20%; position: fixed;">
+        <img src="imagens/pilar.png" style="left: auto; right: 0; top: 0; height: 100%; width: 20%; position: fixed;">
 
         <main>
-            <img src="imagens/placeholder.png" style="height: 200px;" alt="">
+            <article>
+                <img src="imagens/placeholder.png" id="imagemPergunta" style="height: 200px;" alt="">
+                <h1 id="tituloPergunta">Pergunta 1</h1>
+                <p id="conteudoPergunta">placeholder</p>
+            </article>
+            <section id="respostas">
+                <button class="resposta" id="resposta1" onclick="alert('Resposta 1')">Resposta 1</button>
+                <button class="resposta" id="resposta2" onclick="alert('Resposta 2')">Resposta 2</button>
+                <button class="resposta" id="resposta3" onclick="alert('Resposta 3')">Resposta 3</button>
+                <button class="resposta" id="resposta4" onclick="alert('Resposta 4')">Resposta 4</button>
         </main>
 
     </body>
