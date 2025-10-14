@@ -11,6 +11,7 @@
 
         <style></style>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script>
             var respostasCorretas = 0;
             var correto = 0;
@@ -23,10 +24,10 @@
                 document.getElementById("tituloPergunta").innerHTML = titulo;
                 document.getElementById("conteudoPergunta").innerHTML = conteudo;
                 document.getElementById("imagemPergunta").src = img;
-                document.getElementById("resposta1").innerHTML = r1;
-                document.getElementById("resposta2").innerHTML = r2;
-                document.getElementById("resposta3").innerHTML = r3;
-                document.getElementById("resposta4").innerHTML = r4;
+                document.getElementById("resposta1").innerHTML = "A- " + r1;
+                document.getElementById("resposta2").innerHTML = "B- " + r2;
+                document.getElementById("resposta3").innerHTML = "C- " + r3;
+                document.getElementById("resposta4").innerHTML = "D- " + r4;
                 correto = novoCorreto;
                 explicacao = novaExplicacao;
             }
@@ -36,7 +37,6 @@
                 chamarPergunta()
             }
 
-            //! Tem um bug com as respostas pegando a resposta correta da próxima pergunta
             chamarPergunta = function(){
                 if(numPergunta == 1){
                     definePergunta(
@@ -134,10 +134,10 @@
                 <p id="conteudoPergunta">placeholder</p>
             </article>
             <section id="respostas">
-                <button class="resposta" id="resposta1" onclick="resp(1)">Resposta 1</button>
-                <button class="resposta" id="resposta2" onclick="resp(2)">Resposta 2</button>
-                <button class="resposta" id="resposta3" onclick="resp(3)">Resposta 3</button>
-                <button class="resposta" id="resposta4" onclick="resp(4)">Resposta 4</button>
+                <button class="resposta" id="resposta1" style="background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(0, 2, 150))" onclick="resp(1)">Resposta 1</button>
+                <button class="resposta" id="resposta2" style="background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(150, 0, 0))" onclick="resp(2)">Resposta 2</button>
+                <button class="resposta" id="resposta3" style="background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(0, 150, 7))" onclick="resp(3)">Resposta 3</button>
+                <button class="resposta" id="resposta4" style="background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(150, 140, 0))" onclick="resp(4)">Resposta 4</button>
         </main>
 
     </body>

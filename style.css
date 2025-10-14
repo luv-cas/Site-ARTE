@@ -1,3 +1,5 @@
+
+
 body {
     background-color: black;
     padding-top: 10%;
@@ -10,9 +12,14 @@ h1 {
 }
 
 button {
-    border: solid 10px aliceblue;
-    border-radius: 2px;
+    padding: 10px;
+    border: 1px;
+    border-radius: 20px;
     background-color: aliceblue;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: black;
+    color: aliceblue;
+    font-size: larger;
 }
 
 .topbar {
