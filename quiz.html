@@ -12,8 +12,112 @@
         <style></style>
 
         <script>
+            var respostasCorretas = 0;
+            var correto = 0;
+            var numPergunta = 1;
+            var explicacao = "Placeholder";
+
+            //! Define uma pergunta com os itens: Título, texto debaixo do título, o link para a imagem, as 4 respostas,
+            //! a resposta correta em número e a explicação dada após a resposta.
+            definePergunta = function(titulo, conteudo, img, r1, r2, r3, r4, novoCorreto, novaExplicacao){
+                document.getElementById("tituloPergunta").innerHTML = titulo;
+                document.getElementById("conteudoPergunta").innerHTML = conteudo;
+                document.getElementById("imagemPergunta").src = img;
+                document.getElementById("resposta1").innerHTML = r1;
+                document.getElementById("resposta2").innerHTML = r2;
+                document.getElementById("resposta3").innerHTML = r3;
+                document.getElementById("resposta4").innerHTML = r4;
+                correto = novoCorreto;
+                explicacao = novaExplicacao;
+            }
+
             callStart = function() {
-                alert("Alerta")
+                alert("Definindo pergunta inicial")
+                chamarPergunta()
+            }
+
+            //! Tem um bug com as respostas pegando a resposta correta da próxima pergunta
+            chamarPergunta = function(){
+                if(numPergunta == 1){
+                    definePergunta(
+                        "Pergunta Placeholder", //! Título
+                        "Conteúdo da pergunta 1", //! Conteúdo
+                        "imagens/pedestal.png", //! Link de imagem
+                        "Primeira", //! Texto de resposta 1
+                        "Segunda", //! Texto de resposta 2
+                        "Terceira e correta", //! Texto de resposta 3
+                        "Quarta", //! Texto de resposta 4
+                        3, //! Número da resposta correta
+                        "Está escrito que a terceira é correta", //! Explicação do porque está correto
+                    )
+                } else if(numPergunta == 2){
+                    definePergunta(
+                        "Pergunta Placeholder", //! Título
+                        "Conteúdo da pergunta 2", //! Conteúdo
+                        "imagens/pedestal.png", //! Link de imagem
+                        "Primeira", //! Texto de resposta 1
+                        "Segunda", //! Texto de resposta 2
+                        "Terceira", //! Texto de resposta 3
+                        "Quarta e correta", //! Texto de resposta 4
+                        4, //! Número da resposta correta
+                        "Está escrito que a terceira é correta", //! Explicação do porque está correto
+                    )
+                } else if(numPergunta == 3){
+                    definePergunta(
+                        "Pergunta Placeholder", //! Título
+                        "Conteúdo da pergunta 3", //! Conteúdo
+                        "imagens/pedestal.png", //! Link de imagem
+                        "Primeira", //! Texto de resposta 1
+                        "Segunda e correta", //! Texto de resposta 2
+                        "Terceira", //! Texto de resposta 3
+                        "Quarta", //! Texto de resposta 4
+                        2, //! Número da resposta correta
+                        "Está escrito que a terceira é correta", //! Explicação do porque está correto
+                    )
+                } else if(numPergunta == 4){
+                    definePergunta(
+                        "Pergunta Placeholder", //! Título
+                        "Conteúdo da pergunta 2", //! Conteúdo
+                        "imagens/pedestal.png", //! Link de imagem
+                        "Primeira", //! Texto de resposta 1
+                        "Segunda", //! Texto de resposta 2
+                        "Terceira", //! Texto de resposta 3
+                        "Quarta e correta", //! Texto de resposta 4
+                        4, //! Número da resposta correta
+                        "Está escrito que a terceira é correta", //! Explicação do porque está correto
+                    )
+                } else if(numPergunta == 5){
+                    definePergunta(
+                        "Pergunta Placeholder", //! Título
+                        "Conteúdo da pergunta 2", //! Conteúdo
+                        "imagens/pedestal.png", //! Link de imagem
+                        "Primeira e correta", //! Texto de resposta 1
+                        "Segunda", //! Texto de resposta 2
+                        "Terceira", //! Texto de resposta 3
+                        "Quarta", //! Texto de resposta 4
+                        1, //! Número da resposta correta
+                        "Está escrito que a terceira é correta", //! Explicação do porque está correto
+                    )
+                } else{
+                    document.getElementById("tituloPergunta").innerHTML = "Fim do questionário"
+                    document.getElementById("conteudoPergunta").innerHTML = "Você acertou " + respostasCorretas + " respostas!"
+
+                    document.getElementById("resposta1").remove()
+                    document.getElementById("resposta2").remove()
+                    document.getElementById("resposta3").remove()
+                    document.getElementById("resposta4").remove()
+                }
+            }
+
+            resp = function(n) {
+                numPergunta += 1;
+                chamarPergunta()
+                if(n == correto){
+                    respostasCorretas += 1;
+                    alert("Correto! " + explicacao)
+                } else {
+                    alert("Errado. " + explicacao)
+                }
             }
         </script>
     </head>
@@ -30,10 +134,10 @@
                 <p id="conteudoPergunta">placeholder</p>
             </article>
             <section id="respostas">
-                <button class="resposta" id="resposta1" onclick="alert('Resposta 1')">Resposta 1</button>
-                <button class="resposta" id="resposta2" onclick="alert('Resposta 2')">Resposta 2</button>
-                <button class="resposta" id="resposta3" onclick="alert('Resposta 3')">Resposta 3</button>
-                <button class="resposta" id="resposta4" onclick="alert('Resposta 4')">Resposta 4</button>
+                <button class="resposta" id="resposta1" onclick="resp(1)">Resposta 1</button>
+                <button class="resposta" id="resposta2" onclick="resp(2)">Resposta 2</button>
+                <button class="resposta" id="resposta3" onclick="resp(3)">Resposta 3</button>
+                <button class="resposta" id="resposta4" onclick="resp(4)">Resposta 4</button>
         </main>
 
     </body>
