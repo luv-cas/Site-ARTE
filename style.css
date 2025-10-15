@@ -30,6 +30,8 @@ button {
 
 .topbar {
     position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
     left: 0;
     top: 0;
     background-color:rgb(255, 255, 255);
