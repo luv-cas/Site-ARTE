@@ -33,7 +33,6 @@
             }
 
             callStart = function() {
-                alert("Definindo pergunta inicial")
                 chamarPergunta()
             }
 
@@ -77,7 +76,7 @@
                 } else if(numPergunta == 4){
                     definePergunta(
                         "Pergunta Placeholder", //! Título
-                        "Conteúdo da pergunta 2", //! Conteúdo
+                        "Conteúdo da pergunta 4", //! Conteúdo
                         "imagens/pedestal.png", //! Link de imagem
                         "Primeira", //! Texto de resposta 1
                         "Segunda", //! Texto de resposta 2
@@ -89,7 +88,7 @@
                 } else if(numPergunta == 5){
                     definePergunta(
                         "Pergunta Placeholder", //! Título
-                        "Conteúdo da pergunta 2", //! Conteúdo
+                        "Conteúdo da pergunta 5", //! Conteúdo
                         "imagens/pedestal.png", //! Link de imagem
                         "Primeira e correta", //! Texto de resposta 1
                         "Segunda", //! Texto de resposta 2
@@ -122,10 +121,10 @@
         </script>
     </head>
 
-    <body onload="callStart()">
+    <body onload="callStart()" style="background-image: url(imagens/background.png);">
         <div class="topbar"></div>
-        <img src="imagens/pilar.png" style="left: 0; top: 0; height: 100%; width: 20%; position: fixed;">
-        <img src="imagens/pilar.png" style="left: auto; right: 0; top: 0; height: 100%; width: 20%; position: fixed;">
+        <img src="imagens/pilar.png" class="pilar" style="left: 0; top: 0; height: 100%; width: 20%; position: fixed;">
+        <img src="imagens/pilar.png" class="pilar" style="left: auto; right: 0; top: 0; height: 100%; width: 20%; position: fixed;">
 
         <main>
             <article>
