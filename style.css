@@ -22,6 +22,11 @@ button {
     font-size: larger;
 }
 
+.botaoTTS {
+    border-radius: 3px;
+}
+
+
 @media only screen and (max-width: 1026px) {
     .pilar {
         display: none;
