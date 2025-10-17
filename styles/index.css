@@ -1,7 +1,4 @@
-body {
-    background-color: black;
-    padding-top: 10%;
-}
+
 .barra {
 
         background-color: rgb(27, 24, 24);
@@ -24,6 +21,7 @@ body {
         margin-left:auto;
       }
       .topbar a {
+        text-align: center;
         text-decoration: none;
         background: none;
         border: none;
@@ -36,8 +34,4 @@ body {
       .topbar a:hover {
         background-color: #444;
       } 
-        .h1 {
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        }       
+          
