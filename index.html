@@ -11,6 +11,10 @@
         
 
         <style></style>
+        <script src="javascript/botaoTTS.js">
+        //! Essa script é externa e está no arquivo botaoTTS.js
+        //! Adiciona a função fazerFala que lé um texto de id inserida na função
+        </script>
     </head>
     <body>
 
@@ -19,9 +23,12 @@
 
         <h1>Arte Moderna e Contemporânea</h1>
 
-        <a href="quiz.html" style="text-align: center;">Quiz</a>
-
-        <main><img src="imagens/pedestal.png" style="height: 100px;"></main>
+        <main>
+            <p id="textoPrincipal">texto principal teste</p>
+            <button onclick="fazerFala('textoPrincipal')">TTS</button>
+            <a href="quiz.html" style="text-align: center;">Quiz</a>
+            <img src="imagens/pedestal.png" style="height: 100px;">
+        </main>
 
     </body>
 </html>
