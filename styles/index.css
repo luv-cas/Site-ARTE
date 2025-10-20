@@ -34,4 +34,19 @@
       .topbar a:hover {
         background-color: #444;
       } 
+      .pilar1 {
+        left: 0; 
+        top: 0; 
+        height: 100%; 
+        width: 20%; 
+        position: fixed;
+      }
+      .pilar2 {
+        left: auto; 
+        right: 0; 
+        top: 0; 
+        height: 100%; 
+        width: 20%; 
+        position: fixed;
+      }
           

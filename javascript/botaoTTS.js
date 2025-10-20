@@ -1,4 +1,7 @@
 fazerFala = function(id){
+    if (speechSynthesis.speaking) {
+        speechSynthesis.cancel();
+    }
                 let utterance = new SpeechSynthesisUtterance
                 utterance.lang = "pt-BR"
                 utterance.volume

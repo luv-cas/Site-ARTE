@@ -22,11 +22,6 @@ button {
     font-size: larger;
 }
 
-.botaoTTS {
-    border-radius: 3px;
-}
-
-
 @media only screen and (max-width: 1026px) {
     .pilar {
         display: none;
@@ -69,6 +64,6 @@ p {
     width: 70px;
     position: fixed;
     top: 80%;
-    right: ;
+    right: 150px;
 
 }
