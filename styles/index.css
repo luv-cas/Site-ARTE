@@ -40,21 +40,5 @@ body {
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         color: white;
-        }       
-
-      .pilar1 {
-        left: 0; 
-        top: 0; 
-        height: 100%; 
-        width: 20%; 
-        position: fixed;
-      }
-      .pilar2 {
-        left: auto; 
-        right: 0; 
-        top: 0; 
-        height: 100%; 
-        width: 20%; 
-        position: fixed;
-      }
+        }
           
