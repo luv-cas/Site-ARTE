@@ -124,11 +124,23 @@
     </head>
 
     <body onload="callStart()" style="background-image: url(imagens/background.png); background-size: 100%;">
-        <div class="topbar"></div>
         <img src="imagens/pilar.png" class="pilar" style="left: 0; top: 0; height: 100%; width: 20%; position: fixed;">
         <img src="imagens/pilar.png" class="pilar" style="left: auto; right: 0; top: 0; height: 100%; width: 20%; position: fixed;">
+        <div class="barra"id="topbar"></div>
+
+        <script>
+            fetch("./topbar.html")
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById("topbar").innerHTML = data;
+            })
+            .catch(err => console.error("Erro ao carregar a topbar:", err));
+        </script>
+
+        </aside>
 
         <main>
+
             <article>
                 <img src="imagens/placeholder.png" id="imagemPergunta" style="height: 200px;" alt="">
                 <h1 id="tituloPergunta">Pergunta 1</h1>
