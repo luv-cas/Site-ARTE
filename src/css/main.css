@@ -1,10 +1,14 @@
 body {
     margin: 0;
     background-color: black;
-    overflow: hidden;
+    overflow-y: scroll;
     font-family: Arial, sans-serif;
     position: relative;
-    height: 100vh;
+    height: 400vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 img {
@@ -15,7 +19,6 @@ img {
 }
 
 .top-top {
-    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -27,11 +30,49 @@ img {
 }
 
 .bottom-left {
-    bottom: 0;
+    top: 11.5%;
     left: 0;
 }
 
 .bottom-right {
-    bottom: 0;
-    right: 0;
+    top: 12.5%;
+    right: 1%;
+}
+
+.mid {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+}
+
+.text {
+    color: white;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: justify;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.bold {
+    color: yellow;
+    font-weight: bold;
+}
+
+.titles {
+    color: yellow;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.art-card-c {
+    position: absolute;
+    top: 90%;
+    left: 15%;
+    transform: translateX(-50%);
 }
