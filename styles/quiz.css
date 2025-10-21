@@ -1,5 +1,5 @@
 .resposta{
-    background: linear-gradient(45deg, black, rgb(194, 3, 3) , rgb(194, 127, 2), rgb(194, 184, 3), rgb(2, 100, 2), rgb(2, 2, 194), rgb(194, 3, 3), black);
+    background: linear-gradient(45deg, black, rgb(194, 3, 3) , rgb(194, 127, 2), rgb(194, 184, 3), rgb(2, 100, 2), rgb(2, 2, 194), black);
 }
 .resposta:hover{
         cursor: pointer;
