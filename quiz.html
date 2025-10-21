@@ -9,8 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/common.css">
 
-        <style></style>
-
+        
+       
         <script>
             var respostasCorretas = 0;
             var correto = 0;
@@ -120,25 +120,19 @@
                 numPergunta += 1;
                 chamarPergunta()
             }
-        </script>
+        </script>  
+        <script src="javascript/botaoTTS.js"></script>
+        <script src="javascript/fetchtopbar.js"></script>
     </head>
 
     <body onload="callStart()" style="background-image: url(imagens/background.png); background-size: 100%;">
+
+        <div class="barra" id="topbar"></div>
+       
         <img src="imagens/pilar.png" class="pilar" style="left: 0; top: 0; height: 100%; width: 20%; position: fixed;">
         <img src="imagens/pilar.png" class="pilar" style="left: auto; right: 0; top: 0; height: 100%; width: 20%; position: fixed;">
-        <div class="barra"id="topbar"></div>
-
-        <script>
-            fetch("./topbar.html")
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById("topbar").innerHTML = data;
-            })
-            .catch(err => console.error("Erro ao carregar a topbar:", err));
-        </script>
-
-        </aside>
-
+         
+>>>>>>> f8df76e22778062a55df042d13e05b40c91b548e
         <main>
 
             <article>
@@ -151,7 +145,12 @@
                 <button class="resposta" id="resposta2" style="background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(150, 0, 0))" onclick="resp(2)">Resposta 2</button>
                 <button class="resposta" id="resposta3" style="background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(0, 150, 7))" onclick="resp(3)">Resposta 3</button>
                 <button class="resposta" id="resposta4" style="background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(150, 140, 0))" onclick="resp(4)">Resposta 4</button>
-        </main>
-
+        <div class="botaofala">
+    <img onclick="fazerFala('texto1')" src="imagens/botaofala.png">
+    </div>
+        <img src="imagens/pedestal.png" style="height: 100px;">
+        <p id="texto1">Arte Moderna e Contemporânea</p>
+  
+</main>
     </body>
 </html>

@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
+<head> 
+    <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Galeria de Artes</title>
+        <title>Galeria de artes</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/common.css">
-        <link rel="stylesheet" href="styles/index.css">
-        
-
-    <style>
-    
-    </style>
-    </head>
-    <body>
+</head>
+<body>
+    <main>
         <div class="barra"id="topbar"></div>
-        <img src="imagens/pilar.png" class="pilar" style="left: 0; top: 0; height: 100%; width: 20%; position: fixed;">
-        <img src="imagens/pilar.png" class="pilar" style="left: auto; right: 0; top: 0; height: 100%; width: 20%; position: fixed;">
+        <div class="botaofala">
+            <img onclick="fazerFala('texto1')" src="imagens/botaofala.png">
+        </div>
+        <p id="texto1">Arte Moderna e Contemporânea</p>
+    </main>
+    <script src="javascript/fetchtopbar.js"></script>
+    <script src="javascript/botaoTTS.js"></script>
+</body>
 
-        <h1>Galeria de Artes</h1>
-
-
-        <main><img src="imagens/pedestal.png" style="height: 100px;"></main>
-    <script>
-        fetch("./topbar.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("topbar").innerHTML = data;
-        })
-        .catch(err => console.error("Erro ao carregar a topbar:", err));
-    </script>
-    </body>
-    
 </html>
