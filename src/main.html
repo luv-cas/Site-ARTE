@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <img src="../img/main/title2.png" class="top-top" width="750">
-    <img src="../img/main/fluent/img.png" class="bottom-left" width="500">
-    <img src="../img/main/fluent/img2.png" class="top-left" width="700">
-    <img src="../img/main/fluent/img3.png" class="bottom-right" width="500">
-
+    <img src="../img/main/title2.png" class="top-top" width="750" alt="Título">
+    <img src="../img/main/fluent/img.png" class="bottom-left" width="455" alt="Imagem 1">
+    <img src="../img/main/fluent/img2.png" class="top-left" width="600" alt="Imagem 2">
+    <img src="../img/main/fluent/img3.png" class="bottom-right" width="450" alt="Imagem 3">
     <div class="text mid">
         <p>
             A <span class="bold">Arte Contemporânea</span> ou 
@@ -26,14 +25,17 @@
             <br><br>
             Artistas contemporâneos frequentemente misturam referências do passado com novas experimentações, utilizando conceitos como globalização, multiculturalismo e crítica social em suas obras.
         </p>
-
         <div class="titles">
             <p>A Arte Contemporânea</p>
         </div>
-
         <div class="art-card-c">
-            <img src="../img/main/cardbox/cogumelo-woman.png" alt="Arte Contemporânea">
+            <img id="art-img" src="../img/main/cardbox/cogumelo-woman.png" alt="Arte Contemporânea" width="600">
         </div>
     </div>
+    <div id="img-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img" alt="Imagem ampliada">
+    </div>
+    <script src="../js/main/main.js"></script>
 </body>
 </html>

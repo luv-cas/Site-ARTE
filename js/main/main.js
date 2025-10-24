@@ -1,8 +1,18 @@
-<script>
-    const imgs = document.querySelectorAll('.static');
-    imgs.forEach(img => img.style.display = 'none');
+// Modal de imagem
+const modal = document.getElementById("img-modal");
+const img = document.getElementById("art-img");
+const modalImg = document.getElementById("modal-img");
+const close = document.getElementsByClassName("close")[0];
 
-    // Bloquear uma imagem específica pelo src
-    const imgEspecifica = document.querySelector('img[src="img5.png"]');
-    if (imgEspecifica) imgEspecifica.style.display = 'none';
-</script>
+img.onclick = () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+};
+
+close.onclick = () => {
+    modal.style.display = "none";
+};
+
+modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+};
