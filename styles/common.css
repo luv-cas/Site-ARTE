@@ -95,6 +95,7 @@ p {
     background: none;
     border: none;
     color: white;
+    -webkit-text-stroke-color: rgb(27, 24, 24);
     font-size: 16px;
     padding: 12px 12px;
     border-radius: 6px;

@@ -7,19 +7,44 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/common.css">
-        <link rel="stylesheet" href="styles/galeria.css">
+        
+        <style>
+            .nome{
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+            .artista{
+                margin-top: 0px;
+                font-size: smaller;
+                font-style: italic;
+            }
+        </style>
 </head>
 <body>
     <main>
         <div class="barra"id="topbar"></div>
+        <img src="imagens/papel.png" class="pilar" style="left: 0; top: 0; height: 100%; width: 10%; position: fixed;">
+        <img src="imagens/papel.png" class="pilar" style="left: auto; right: 0; top: 0; height: 100%; width: 10%; position: fixed;">
         <div class="botaofala">
             <img onclick="fazerFala('texto1')" src="imagens/botaofala.png">
         </div>
-        <p id="texto1">Arte Moderna e Contemporânea</p>
+        <h1>Arte Moderna</h1>
+        <p id="texto1">Texto 1</p>
+        <div style="display: flex; gap: 30px;">
+        <article>
+            <img src="imagens/placeholder.png" style="width: 200px;">
+            <p class="nome">Nome da pintura</p>
+            <p class="artista">Artista</p>
+            <img src="imagens/pedestal.png" style="width: 200px;">
+        </article>
+        <article>
+            <img src="imagens/placeholder.png" style="width: 200px;">
+            <p class="nome">Nome da pintura</p>
+            <p class="artista">Artista</p>
+            <img src="imagens/pedestal.png" style="width: 200px;">
+        </article>
+        </div>
     </main>
-    <section>
-         <body onload="callStart()"></body>
-    </section>
     <script src="javascript/fetchtopbar.js"></script>
     <script src="javascript/botaoTTS.js"></script>
 </body>
