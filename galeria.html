@@ -1,51 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head> 
-    <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Galeria de artes</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/common.css">
-        
-        <style>
-            .nome{
-                font-weight: bold;
-                margin-bottom: 0;
-            }
-            .artista{
-                margin-top: 0px;
-                font-size: smaller;
-                font-style: italic;
-            }
-        </style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Galeria de Artes</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/galeria.css">
+  
 </head>
+
 <body>
-    <main>
-        <div class="barra"id="topbar"></div>
-        <img src="imagens/papel.png" class="pilar" style="left: 0; top: 0; height: 100%; width: 10%; position: fixed;">
-        <img src="imagens/papel.png" class="pilar" style="left: auto; right: 0; top: 0; height: 100%; width: 10%; position: fixed;">
-        <div class="botaofala">
-            <img onclick="fazerFala('texto1')" src="imagens/botaofala.png">
-        </div>
-        <h1>Arte Moderna</h1>
-        <p id="texto1">Texto 1</p>
-        <div style="display: flex; gap: 30px;">
-        <article>
-            <img src="imagens/placeholder.png" style="width: 200px;">
-            <p class="nome">Nome da pintura</p>
-            <p class="artista">Artista</p>
-            <img src="imagens/pedestal.png" style="width: 200px;">
-        </article>
-        <article>
-            <img src="imagens/placeholder.png" style="width: 200px;">
-            <p class="nome">Nome da pintura</p>
-            <p class="artista">Artista</p>
-            <img src="imagens/pedestal.png" style="width: 200px;">
-        </article>
-        </div>
-    </main>
-    <script src="javascript/fetchtopbar.js"></script>
-    <script src="javascript/botaoTTS.js"></script>
+  <main>
+    <div class="barra" id="topbar"></div>
+
+    <div class="botaofala">
+      <img onclick="fazerFala('texto1')" src="imagens/botaofala.png" alt="Botão de fala">
+    </div>
+
+    <h1>Arte Moderna</h1>
+    <p id="texto1">Texto 1</p>
+
+    <!-- ===== GALERIA ===== -->
+    <div class="galeria">
+      <div class="item" onclick="abrirModal('Pablo Picasso', 'Principal nome do Cubismo, revolucionou a arte moderna com o uso de formas geométricas e fragmentação visual.')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Pablo_picasso_1.jpg" alt="Pablo Picasso">
+        <p><b>Pablo Picasso</b></p>
+      </div>
+
+      <div class="item" onclick="abrirModal('Tarsila do Amaral', 'Uma das maiores artistas brasileiras, criadora de obras icônicas do modernismo nacional, como “Abaporu”.')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Tarsila_do_Amaral_1925.jpg" alt="Tarsila do Amaral">
+        <p><b>Tarsila do Amaral</b></p>
+      </div>
+
+      <div class="item" onclick="abrirModal('Wassily Kandinsky', 'Pioneiro da arte abstrata, explorou cores e formas para expressar emoções sem depender de figuras concretas.')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Wassily-Kandinsky.jpeg" alt="Wassily Kandinsky">
+        <p><b>Wassily Kandinsky</b></p>
+      </div>
+    </div>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <h2 id="modalTitulo"></h2>
+        <p id="modalDescricao"></p>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="javascript/fetchtopbar.js"></script>
+  <script src="javascript/botaoTTS.js"></script>
+
+  <script>
+    // ===== LÓGICA DO MODAL =====
+    const modal = document.getElementById('modal');
+    const modalTitulo = document.getElementById('modalTitulo');
+    const modalDescricao = document.getElementById('modalDescricao');
+
+    function abrirModal(titulo, descricao) {
+      modalTitulo.textContent = titulo;
+      modalDescricao.textContent = descricao;
+      modal.style.display = 'flex';
+    }
+
+    function fecharModal() {
+      modal.style.display = 'none';
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) fecharModal();
+    });
+  </script>
 </body>
 </html>
