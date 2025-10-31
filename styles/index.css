@@ -3,21 +3,6 @@ body {
     background-color: black;
     padding-top: 10%;
 }
-
-article {
-  background-color: white;
-  border: solid, 5px;
-  border-radius: 5px;
-  border-color: white;
-}
-
-.nome {
-  color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: bold;
-  font-size: large;
-}
-
 .barra {
 
         background-color: rgb(27, 24, 24);
@@ -38,9 +23,8 @@ article {
         gap: 20px;
         margin-right:auto;
         margin-left:auto;
-}
-
-.topbar a {
+      }
+      .topbar a {
         text-decoration: none;
         background: none;
         border: none;
@@ -49,15 +33,13 @@ article {
         padding: 12px 12px;
         border-radius: 6px;
         transition: 0.3s;
-}
-
-.topbar a:hover {
+      }
+      .topbar a:hover {
         background-color: #444;
-}
-
-.h1 {
+      } 
+        .h1 {
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         color: white;
-}
+        }
           
