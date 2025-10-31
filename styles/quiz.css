@@ -1,5 +1,23 @@
+
+
+@keyframes trocadecor {
+        0% {
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+     100% {
+            background-position: 0% 100%;
+        }
+}
+
 .resposta{
-    background: linear-gradient(45deg, black, rgb(194, 3, 3) , rgb(194, 127, 2), rgb(194, 184, 3), rgb(2, 100, 2), rgb(2, 2, 194), black);
+    background: linear-gradient(45deg, rgb(194, 3, 3) , rgb(192, 74, 5), rgb(194, 127, 2), rgb(194, 184, 3),  rgb(2, 100, 2),  rgb(2, 2, 194),   rgb(194, 3, 3), rgb(194, 127, 2));
+    color: white;
+    background-size: 800% 800%;
+    animation: trocadecor 20s linear infinite ;
+
 }
 .resposta:hover{
         cursor: pointer;
