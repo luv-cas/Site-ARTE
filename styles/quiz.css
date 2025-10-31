@@ -24,3 +24,15 @@
         transform: scale(1.1); 
         transition: 0.2s;
 }
+.imagempergunta{
+    height: 20em;
+    width: 30em;
+    right: 50em;
+    position: absolute;
+}
+.titulopergunta{
+
+}
+.conteudopergunta{
+    
+}
