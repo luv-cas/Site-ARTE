@@ -131,3 +131,43 @@ img {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
+
+.carousel {
+  width: 1000px;
+  height: 600px;
+  overflow: hidden;
+  margin: 20px auto;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(600px * 12);
+  animation: scroll 36s linear infinite;
+}
+
+.carousel img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  pointer-events: auto;
+}
+
+.carousel img.zoomed {
+  transform: scale(1.5);
+  z-index: 100;
+  position: relative;
+  transform-origin: center center; /* padrão, mas garante centralização */
+}
+
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-3600px); }
+}
