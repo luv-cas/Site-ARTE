@@ -15,13 +15,6 @@
   <main>
     <div class="barra" id="topbar"></div>
 
-    <div class="botaofala">
-      <img onclick="fazerFala('texto1')" src="imagens/botaofala.png" alt="Botão de fala">
-    </div>
-    <div class="moderna">
-    <h1>Arte Moderna</h1>
-    <p id="texto1">Texto 1</p>
-
     <!-- ===== GALERIA ===== -->
     <div class="galeria1">
       <div class="item" onclick="abrirModal('Pablo Picasso', 'Pablo Picasso foi um dos maiores artistas do século XX, conhecido por sua inovação em pintura, escultura e outras formas de arte. Ele passou por várias fases, como o Período Azul, o Período Rosa e, especialmente, o Cubismo, que revolucionou a arte ao fragmentar formas e abandonando a perspectiva tradicional. Picasso também explorou o surrealismo e a arte clássica, sempre se reinventando. Sua obra mais famosa: Guernica, é um ícone de protesto contra a guerra. Seu legado continua a influenciar profundamente a arte contemporânea.','imagensgaleria/guernica_picasso.jpg')">
@@ -60,14 +53,18 @@
     </div>
   </div>
 
-    <!-- ===== MODAL ===== -->
+      <!--//    =MODAL=   //-->
     <div class="modal" id="modal">
       <div class="modal-content">
         <span class="fechar" onclick="fecharModal()">&times;</span>
+          <img src="imagens/botaofala.png" 
+            alt="Botão de fala"
+            class="botaofala-modal"
+            onclick="falarModal()">
         <img id="modalImagem" src="" alt="Imagem do artista">
-        <h2 id="modalTitulo"></h2>
-        <p id="modalDescricao"></p>
-      </div>
+      <h2 id="modalTitulo"></h2>
+    <p id="modalDescricao"></p>
+</div>
     </div>
 
   </main>

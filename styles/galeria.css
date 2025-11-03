@@ -104,4 +104,16 @@ body{
 
     }.moderna h1{
       margin-top: -60px;
-    }
+    }.botaofala-modal {
+      position: absolute;
+      top: 15px;
+      right: 50px;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }.botaofala-modal:hover {
+      opacity: 1;
+      transform: scale(1.1);
+  }

@@ -13,7 +13,11 @@
 
     function fecharModal() {
       modal.style.display = 'none';
+      
+      if (speechSynthesis.speaking) {
+      speechSynthesis.cancel();
     }
+  }
 
     modal.addEventListener('click', (e) => {
       if (e.target === modal) fecharModal();
