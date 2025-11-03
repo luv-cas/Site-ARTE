@@ -24,18 +24,18 @@
 
     <!-- ===== GALERIA ===== -->
     <div class="galeria">
-      <div class="item" onclick="abrirModal('Pablo Picasso', 'Principal nome do Cubismo, revolucionou a arte moderna com o uso de formas geométricas e fragmentação visual.')">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Pablo_picasso_1.jpg" alt="Pablo Picasso">
+      <div class="item" onclick="abrirModal('Pablo Picasso', 'Pablo Picasso foi um dos maiores artistas do século XX, conhecido por sua inovação em pintura, escultura e outras formas de arte. Ele passou por várias fases, como o Período Azul, o Período Rosa e, especialmente, o Cubismo, que revolucionou a arte ao fragmentar formas e abandonando a perspectiva tradicional. Picasso também explorou o surrealismo e a arte clássica, sempre se reinventando. Sua obra mais famosa: Guernica, é um ícone de protesto contra a guerra. Seu legado continua a influenciar profundamente a arte contemporânea.','imagensgaleria/guernica_picasso.jpg')">
+        <img src="imagensgaleria/picasso.png" alt="Pablo Picasso">
         <p><b>Pablo Picasso</b></p>
       </div>
 
       <div class="item" onclick="abrirModal('Tarsila do Amaral', 'Uma das maiores artistas brasileiras, criadora de obras icônicas do modernismo nacional, como “Abaporu”.')">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Tarsila_do_Amaral_1925.jpg" alt="Tarsila do Amaral">
+        <img src="imagensgaleria/tarsila.png" alt="Tarsila do Amaral">
         <p><b>Tarsila do Amaral</b></p>
       </div>
 
       <div class="item" onclick="abrirModal('Wassily Kandinsky', 'Pioneiro da arte abstrata, explorou cores e formas para expressar emoções sem depender de figuras concretas.')">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Wassily-Kandinsky.jpeg" alt="Wassily Kandinsky">
+        <img src="imagensgaleria/wassily.png" alt="Wassily Kandinsky">
         <p><b>Wassily Kandinsky</b></p>
       </div>
     </div>
@@ -44,6 +44,7 @@
     <div class="modal" id="modal">
       <div class="modal-content">
         <span class="fechar" onclick="fecharModal()">&times;</span>
+        <img id="modalImagem" src="" alt="Imagem do artista">
         <h2 id="modalTitulo"></h2>
         <p id="modalDescricao"></p>
       </div>
@@ -53,26 +54,6 @@
 
   <script src="javascript/fetchtopbar.js"></script>
   <script src="javascript/botaoTTS.js"></script>
-
-  <script>
-    // ===== LÓGICA DO MODAL =====
-    const modal = document.getElementById('modal');
-    const modalTitulo = document.getElementById('modalTitulo');
-    const modalDescricao = document.getElementById('modalDescricao');
-
-    function abrirModal(titulo, descricao) {
-      modalTitulo.textContent = titulo;
-      modalDescricao.textContent = descricao;
-      modal.style.display = 'flex';
-    }
-
-    function fecharModal() {
-      modal.style.display = 'none';
-    }
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) fecharModal();
-    });
-  </script>
+  <script src="javascript/modal.js"></script>
 </body>
 </html>
