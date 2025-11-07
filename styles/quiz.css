@@ -14,10 +14,10 @@
 
 .resposta{
     max-width: 20em;
-    background: linear-gradient(45deg, rgb(194, 3, 3) , rgb(192, 74, 5), rgb(194, 127, 2), rgb(194, 184, 3),  rgb(2, 100, 2),  rgb(2, 2, 194),   rgb(194, 3, 3), rgb(194, 127, 2));
+    background: linear-gradient(45deg, rgba(194, 3, 3, 0.808) , rgba(192, 74, 5, 0.925), rgb(194, 127, 2), rgba(194, 184, 3, 0.685),  rgba(2, 100, 2, 0.856),  rgba(2, 2, 194, 0.788),   rgb(194, 3, 3, 0.808), rgba(194, 127, 2, 0.877));
     color: white;
     background-size: 800% 800%;
-    animation: trocadecor 20s linear infinite ;
+    animation: trocadecor 45s linear infinite ;
     top: 50em;
 
 }
