@@ -103,7 +103,9 @@ body{
       margin-bottom: -200px;
 
     }.moderna h1{
-      margin-top: -60px;
+      position: relative;
+      margin-bottom: 70px;
+      margin-top: -50px;
     }.botaofala-modal {
       position: absolute;
       top: 15px;
