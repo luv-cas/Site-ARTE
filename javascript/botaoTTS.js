@@ -4,12 +4,12 @@ fazerFala = function(id){
   }
   let utterance = new SpeechSynthesisUtterance
   utterance.lang = "pt-BR"
-  utterance.volume = 1;
+  utterance.volume = 1
   utterance.text = document.getElementById(id).innerHTML
   console.log(document.getElementById(id).innerHTML)
   speechSynthesis.speak(utterance)
 }
-    // -- Parte da galeria -- //
+// -- Parte da galeria -- //
 function falarModal() {
   if (speechSynthesis.speaking) {
     speechSynthesis.cancel()
@@ -21,7 +21,6 @@ function falarModal() {
   const texto = `${titulo}. ${descricao}`
   const utterance = new SpeechSynthesisUtterance(texto)
   utterance.lang = "pt-BR"
-  utterance.rate = 1
   utterance.volume = 1
   speechSynthesis.speak(utterance)
 }

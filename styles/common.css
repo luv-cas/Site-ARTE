@@ -64,6 +64,7 @@ p {
     position: fixed;
     top: 80%;
     right: 150px;
+    cursor: pointer;
 }
 .barra {
 
