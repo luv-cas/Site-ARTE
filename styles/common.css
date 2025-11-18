@@ -60,13 +60,10 @@ p {
     color: white;
 } 
 .botaofala img{
-
     width: 70px;
     position: fixed;
     top: 80%;
     right: 150px;
-    z-index: 2000;
-
 }
 .barra {
 
