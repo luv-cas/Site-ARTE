@@ -1,9 +1,9 @@
 body {
     margin: 0;
-    background-color: black;
-    overflow-y: scroll;
+    background-color: #000;
+    color: #fff;
     font-family: Arial, sans-serif;
-    position: relative;
+    overflow-y: scroll;
 }
 
 body::-webkit-scrollbar {
@@ -18,66 +18,48 @@ img {
 
 .top-top {
     position: relative;
-    top: 0%;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.top-left {
+.top-left, .bottom-left, .bottom-right {
     position: absolute;
-    top: 0.2%;
-    left: 0;
 }
 
-.bottom-left {
-    position: absolute;
-    top: 11.5%;
-    left: 0;
-}
-
-.bottom-right {
-    position: absolute;
-    top: 14%;
-    right: 1%;
-}
+.top-left { top: 0.2%; left: 0; }
+.bottom-left { top: 11.5%; left: 0; }
+.bottom-right { top: 14%; right: 1%; }
 
 .mid {
     width: 60%;
-    margin: 500px auto 0 auto; /* centralizado e afastado do topo */
+    margin: 600px auto 0 auto;
 }
 
 .text {
-    color: white;
-    font-size: 21px;
-    line-height: 1.3;
-    text-align: justify;
-    padding: 30px;
     background: rgba(49, 49, 49, 0.6);
     border: 0.1px solid rgba(255, 255, 0, 0.425);
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 30px;
+    text-align: justify;
+    line-height: 1.4;
 }
 
-.bold {
-    color: yellow;
-    font-weight: bold;
-}
+.bold { color: yellow; font-weight: bold; }
 
 .titles {
     color: yellow;
-    font-weight: bold;
     font-size: 50px;
     text-align: center;
+    font-weight: bold;
     margin: 20px 0 40px 0;
 }
 
 .carousel {
-    width: 1200px;
+    width: 1150px;
     height: 600px;
     overflow: hidden;
-    margin: 10px auto;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -133,12 +115,9 @@ img {
     font-size: 50px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.close:hover {
-    color: white;
-}
+.close:hover { color: white; }
 
 @keyframes zoomIn {
     from { transform: scale(0.8); opacity: 0; }
@@ -147,8 +126,8 @@ img {
 
 .t-moderna {
     color: yellow;
-    font-weight: bold;
     font-size: 50px;
+    font-weight: bold;
     text-align: center;
     margin-top: 150px;
 }
@@ -162,14 +141,55 @@ img {
     width: 92%;
 }
 
-.modern-art img {
-    width: 32%;
-}
+.modern-art img { width: 32%; }
 
 .tabata {
-    color: white;
+    color: yellow;
     font-weight: bold;
-    font-size: 50px;
-    text-align: center;
-    margin: 100px 0 150px 0;
+    font-size: 40px;
+    margin: 0 0 10px 0; /* remove margem superior e diminui a inferior */
+}
+
+.tabata-container {
+    display: flex;
+    flex-direction: column; /* organiza artistas verticalmente */
+    gap: 50px; /* espaçamento entre artistas */
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tabata-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 200px;
+}
+
+.tabata-text .tabata p {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: yellow;
+}
+
+.artist-info p {
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: justify;
+    margin-bottom: 250px; /* espaço entre artistas */
+}
+
+.tabata-images {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: row; /* aqui muda pra horizontal */
+    gap: 20px; /* espaçamento entre as imagens */
+    align-items: flex-start; /* ou center, se quiser centralizar verticalmente */
+}
+
+.tabata-images img {
+    width: 100%;
+    max-width: 500px; /* ajusta conforme quiser pra caber lado a lado */
+    border-radius: 10px;
+    object-fit: cover;
 }
