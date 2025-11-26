@@ -1,0 +1,41 @@
+
+
+@keyframes trocadecor {
+        0% {
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+     100% {
+            background-position: 0% 100%;
+        }
+}
+
+.resposta{
+    max-width: 20em;
+    background: linear-gradient(45deg, rgba(194, 3, 3, 0.808) , rgba(192, 74, 5, 0.925), rgb(194, 127, 2), rgba(194, 184, 3, 0.685),  rgba(2, 100, 2, 0.856),  rgba(2, 2, 194, 0.788),   rgb(194, 3, 3, 0.808), rgba(194, 127, 2, 0.877));
+    color: white;
+    background-size: 800% 800%;
+    animation: trocadecor 45s linear infinite ;
+    top: 50em;
+
+}
+.resposta:hover{
+        cursor: pointer;
+        transform: scale(1.1); 
+        transition: 0.2s;
+}
+.imagempergunta{
+    height: 20em;
+    width: 30em;
+    position: center;
+    margin-left: 30%;
+    margin-right: 50%;
+}
+.titulopergunta{
+    max-width: 40em;
+}
+.conteudopergunta{
+
+}
