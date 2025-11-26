@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arte Contemporânea</title>
-    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/common.css">
+   
     <link rel="icon" type="image/png" href="../img/icon2.png">
 </head>
 <body>
@@ -13,6 +16,7 @@
     <img src="../img/main/fluent/img2.png" class="top-left" width="600" alt="Imagem 2">
     <img src="../img/main/fluent/img3.png" class="bottom-right" width="450" alt="Imagem 3">
 
+    <div class="barra" id="topbar"></div>
     <div class="text mid">
         <p>
             A <span class="bold">Arte Contemporânea</span> ou 
@@ -30,6 +34,9 @@
 
         <div class="titles">
             <p>A Arte Contemporânea</p>
+        
+            <img class="botaofala" onclick="fazerFalaIndex('A Arte Contemporânea ou Arte Pós-Moderna é uma tendência artística que surgiu na segunda metade do século 20. Sua origem costuma ser relacionada à década de 60 e ao movimento pop art. A Arte Contemporânea se prolonga até os dias atuais, período denominado de pós-modernismo, propondo expressões artísticas originais com técnicas inovadoras. Essa arte é marcada pela diversidade de estilos e mídias — pintura, escultura, fotografia, vídeo, performance e instalações. Ela reflete a sociedade contemporânea, questionando valores tradicionais e explorando novas ideias sobre cultura, identidade e tecnologia. Artistas contemporâneos misturam referências do passado com novas experimentações, usando conceitos como globalização, multiculturalismo e crítica social.')" src="imagens/botaofala.png">
+          
         </div>
 
         <div class="carousel">
@@ -46,6 +53,7 @@
                 <img src="../img/main/cardbox/bolas-non.jpeg" alt="">
             </div>
         </div>
+        
     </div>
     <div class="t-moderna">
         <p>Arte Moderna</p>
@@ -68,6 +76,8 @@
                 Tarsila é famosa por suas obras que capturam a identidade nacional com cores vibrantes e formas únicas.<br>
                 Ao lado de Anita Malfatti, impulsionou o <span class="bold">modernismo</span> no Brasil e contribuiu para o movimento da <span class="bold">Antropofagia</span> nos anos 1920, valorizando a cultura brasileira e questionando padrões europeus.
             </p>
+            <img class="botaofala" onclick="fazerFalaIndex('Pintora brasileira e ícone do modernismo.Tarsila é famosa por suas obras que capturam a identidade nacional com cores vibrantes e formas únicas.Ao lado de Anita Malfatti, impulsionou o modernismo no Brasil e contribuiu para o movimento da Antropofagia nos anos 1920, valorizando a cultura brasileira e questionando padrões europeus.')" src="imagens/botaofala.png">
+
         </div>
 
         <div class="tabata-images">
@@ -85,6 +95,8 @@
                 Adriana explora temas históricos e culturais de forma intensa, usando técnicas que misturam pintura, instalação e relevo.<br>
                 Suas obras frequentemente abordam questões de <span class="bold">colonialismo</span>, <span class="bold">corpo humano</span> e memória, transformando tradições em experiências visuais poderosas.
             </p>
+            <img class="botaofala" onclick="fazerFalaIndex('Artista contemporânea brasileira reconhecida internacionalmente. Adriana explora temas históricos e culturais de forma intensa, usando técnicas que misturam pintura, instalação e relevo. Suas obras frequentemente abordam questões de colonialismo, corpo humano e memória, transformando tradições em experiências visuais poderosas.')" src="imagens/botaofala.png">
+
         </div>
 
         <div class="tabata-images">
@@ -97,10 +109,14 @@
         <span class="close">&times;</span>
         <img class="modal-content" id="modal-img" alt="Imagem ampliada">
     </div>
+<main>
     <script src="../js/main/main.js"></script>
+    <script src="javascript/botaoTTS.js"></script>
     <script src="javascript/fetchtopbar.js"></script>
+</main>
     <a href="galeria.html" class="btn-navegacao">
     Jogue o Quiz e Visite a Galeria
 </a>
+
 </body>
 </html>

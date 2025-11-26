@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    height: auto;
+}
+
+.top-top {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top-left, .bottom-left, .bottom-right {
+    position: absolute;
+}
+
+.top-left { top: 0.2%; left: 0; }
+.bottom-left { top: 11.5%; left: 0; }
+.bottom-right { top: 14%; right: 1%; }
+
+.mid {
+    width: 60%;
+    margin: 600px auto 0 auto;
+}
+
+.text {
+    background: rgba(49, 49, 49, 0.6);
+    border: 0.1px solid rgba(255, 255, 0, 0.425);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.bold { color: yellow; font-weight: bold; }
+
+.titles {
+    color: yellow;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0 40px 0;
+}
+
+.carousel {
+    width: 1150px;
+    height: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(600px * 10);
+    animation: scroll 36s linear infinite;
+}
+
+.carousel img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-3600px); }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    display: block;
+    margin: 100px auto;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 15px;
+    animation: zoomIn 0.4s ease;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: yellow;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover { color: white; }
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.t-moderna {
+    color: yellow;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.modern-art {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 40px auto 80px auto;
+    width: 92%;
+}
+
+.modern-art img { width: 32%; }
+
+.tabata {
+    color: yellow;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0 0 10px 0; /* remove margem superior e diminui a inferior */
+}
+
+.tabata-container {
+    display: flex;
+    flex-direction: column; /* organiza artistas verticalmente */
+    gap: 50px; /* espaçamento entre artistas */
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tabata-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 200px;
+}
+
+.tabata-text .tabata p {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: yellow;
+}
+
+.artist-info p {
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: justify;
+    margin-bottom: 100px; /* espaço entre artistas */
+}
+
+.tabata-images {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: row; /* aqui muda pra horizontal */
+    gap: 20px; /* espaçamento entre as imagens */
+    align-items: flex-start; /* ou center, se quiser centralizar verticalmente */
+}
+
+.tabata-images img {
+    width: 100%;
+    max-width: 500px; /* ajusta conforme quiser pra caber lado a lado */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.botaofala:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.botaofala {
+  width: 100px;
+}
+.btn-navegacao {
+  display: block;             
+  width: fit-content;         
+  margin: 60px auto 100px auto;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  
+
+  background-color: transparent;
+  border: 2px solid yellow;
+  color: yellow;
+  font-family: sans-serif;
+  font-weight: 1000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.btn-navegacao:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
